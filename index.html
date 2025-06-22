@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hunian Kita</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    
+    <style>
+        .navbar {
+            background-color: rgba(0, 0, 0, 0.4);
+            padding: 0;
+        }
+
+        .navbar .nav-link.active,
+        .navbar .navbar-brand {
+            color: white;
+        }
+
+        .navbar-toggler {
+            border-color: rgba(255, 255, 255, 0.1);
+        }
+
+        .navbar-toggler-icon {
+            background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%28255, 255, 255, 1%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+        }
+
+        .collapse.navbar-collapse {
+            justify-content: flex-end;
+        }
+
+        .fixed-top {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 10;
+            background-color: rgba(0, 0, 0, 0.3);
+            transition: background-color 0.3s ease-in-out;
+        }
+        .banner {
+            background: url("asset/img/banner.jpg") no-repeat center center;
+            background-size: cover;
+            height: 594px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .banner h1, p {
+            color: white;
+            text-shadow: 2px 2px 6px #000;
+        }
+
+        .content-container {
+            margin-top: 60px;
+        }
+
+        .video-iframe {
+            margin-bottom: 20px;
+        }
+
+        .btn-custom {
+            margin-top: 30px;
+            background-color: rgba(0, 0, 0, 0.3);
+            color: #fff;
+            border-radius: 20px;
+        }
+
+        .btn-custom:hover {
+            background-color: rgba(0, 0, 0, 0.5);
+            transform: scale(1.05);
+            color: #fff;
+        }
+
+        .card-text {
+            color: #000;
+            text-shadow: none;
+        }
+    </style>
+</head>
+<body>
+    <!--navbar-->
+    <nav class="navbar navbar-expand-lg fixed-top">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#" style="font-size: 25px;"><strong>Hunian Kita</strong></a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="src/halaman_pemesanan.php">Pemesanan</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="src/halaman_history.php">Daftar Pesanan</a>
+              </li>
+            </ul>
+            <form class="d-flex">
+              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+              <button class="btn btn-outline-success" type="submit">Search</button>
+            </form>
+          </div>
+        </div>
+      </nav>
+       <!-- Banner menggunakan countainer -->
+    <div class="container-fluid banner">
+        <div class="container text-center">
+            <h1 style="margin-top: 70px;"><strong>Selamat Datang di Hunian Kita</strong></h1>
+            <p style="font-size: 20px;">Mari jelajahi berbagai pilihan properti yang kami sediakan</p>
+            <a href="#">
+                <button type="button" class="btn btn-custom">Baca Selengkapnya..</button>
+            </a>
+        </div>
+    </div>
+    <!-- Layout Content Menggunakan Row dan Column/Kolom (Col) -->
+    <div class="container-fluid content-container">
+        <!-- Layout Content Bagian Row untuk main dan sidebar -->
+        <div class="row">
+            <!-- Main Content -->
+            <div class="col-lg-8 mb-4">
+              <!-- Main content menggunakan card -->
+                <div class="card mb-5">
+                    <img width="100%" height="350px" src="asset/img/kamar.jpg" class="card-img-top" alt="rumah">
+                    <div class="card-body">
+                        <h5 class="card-title">Hunian yang nyaman dan praktis untuk individu atau pasangan. Cocok untuk yang menginginkan privasi dan kenyamanan tanpa kebutuhan ruang yang besar.</h5>
+                        <p class="card-text">Kamar adalah pilihan yang sempurna untuk mereka yang mencari hunian yang nyaman dan praktis. Didesain untuk individu atau pasangan, kamar-kamar ini menawarkan ruang yang efisien namun tetap nyaman. Dengan berbagai fasilitas yang disediakan, termasuk tempat tidur yang nyaman, kamar mandi pribadi, dan area tempat duduk, para tamu akan merasa seperti berada di rumah. Kamar-kamar ini sangat ideal bagi pelancong solo, profesional yang bepergian, atau pasangan yang menginginkan privasi dan kenyamanan tanpa kebutuhan akan ruang yang besar.
+
+                        </p>
+                        <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                    </div>
+                </div>
+                <div class="card mb-5">
+                    <img width="100%" height="350px" src="asset/img/pavilion.jpg" class="card-img-top" alt="Raja Ampat Image">
+                    <div class="card-body">
+                        <h5 class="card-title"><strong>Penginapan eksklusif yang menawarkan suasana mewah dan fasilitas lengkap. Ideal untuk liburan romantis atau keluarga kecil yang menginginkan pengalaman menginap yang istimewa.</strong></h5>
+                        <p class="card-text">Pavilion adalah persembahan eksklusif bagi mereka yang menginginkan pengalaman menginap yang istimewa. Dengan desain yang mewah dan fasilitas yang lengkap, pavilion menyajikan suasana yang menenangkan dan penuh dengan kenyamanan. Dilengkapi dengan ruang tamu yang luas, kamar tidur yang elegan, dan fasilitas premium seperti kolam renang pribadi atau taman, pavilion memberikan pengalaman menginap yang tak terlupakan bagi tamu-tamu yang menghargai kualitas dan keindahan.
+
+                        </p>
+                        <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                    </div>
+                    
+                </div>
+            </div>
+            
+    <!-- Layout Footer Menggunakan Bootstrap container -->
+    <footer class="bg-dark text-white py-3">
+        <div class="container">
+            <center>Anggita Ardilianz Faticha - 1938315860-5</center>
+        </div>
+    </footer>
+
+      
+
+
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+</body>
+</html>
